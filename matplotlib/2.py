@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 # plt, numpy, scatter example
 import numpy as np;
 import matplotlib.pyplot as plt;
@@ -7,7 +8,7 @@ y = [ 1, 4, 9, 16, 25 ];
 print "y=: \r\n", y;
 fig = plt.figure( );
 ax = fig.add_subplot( 1, 1, 1 );
-ax.axis( [ -1, 6, -1, 30 ] );
+#ax.axis( [ -1, 6, -1, 30 ] );
 sValue = 10 * x;
 print "sValue=: \r\n", sValue;
 
@@ -27,6 +28,18 @@ for a, b in zip( x, y ):
             textcoords = 'offset points',
             ha = 'center',
             va = 'top' );
+# 添加注释
+# 第一个参数是注释的内容
+# xy设置箭头尖的坐标
+# xytext设置注释内容显示的起始位置
+# arrowprops 用来设置箭头
+# facecolor 设置箭头的颜色
+# headlength 箭头的头的长度
+# headwidth 箭头的宽度
+# width 箭身的宽度
+plt.annotate('this is a annotate', xy=(2, 4), xytext=(4, 9),arrowprops=dict(facecolor='yellow', shrink=0.05))
+# 可以通过设置xy和xytext中坐标的值来设置箭身是否倾斜
+
 plt.title( 'basic scatter plot ' );
 plt.xlabel( 'variables x' );
 plt.ylabel( 'variables y' );
