@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
 # plt, numpy, scatter example
+
 import numpy as np;
 import matplotlib.pyplot as plt;
 x = [ 1, 2, 3, 04, 05 ];
